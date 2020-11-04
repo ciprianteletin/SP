@@ -1,11 +1,12 @@
 import com.book.*;
+import com.utils.Dimension;
 
 public class BookMain {
     public static void main(String[] args) throws Exception {
         long startTime = System.currentTimeMillis();
-        ImageProxy img1 = new ImageProxy("Pamela Anderson");
-        ImageProxy img2 = new ImageProxy("Kim Kardashian");
-        ImageProxy img3 = new ImageProxy("Kirby Griffin");
+        ImageProxy img1 = new ImageProxy("Pamela Anderson", new Dimension(25,25));
+        ImageProxy img2 = new ImageProxy("Kim Kardashian", new Dimension(25,16));
+        ImageProxy img3 = new ImageProxy("Kirby Griffin", new Dimension(15,13));
         Section playboyS1 = new Section("Front Cover");
         playboyS1.addElement(img1);
         Section playboyS2 = new Section("Summer Girls");

@@ -1,12 +1,15 @@
 package com.book;
 
+import com.utils.Dimension;
+
 public class ImageProxy implements Element {
     private String url;
-    private int dimension;
+    private Dimension dimension;
     private Image realImage;
 
-    public ImageProxy(String url){
+    public ImageProxy(String url, Dimension dimension){
         this.url = url;
+        this.dimension = dimension;
     }
 
     private Image loadImage(){
@@ -19,5 +22,6 @@ public class ImageProxy implements Element {
     @Override
     public void print() {
         loadImage().print();
+        dimension.printDimension();
     }
 }
